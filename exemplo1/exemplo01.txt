@@ -1,0 +1,27 @@
+seja o seguinte trecho de programa: 
+
+int i=3, j=5;
+int *p, *q;
+p = &i;
+q = &j;
+
+determine o valor das seguintes expressoes:
+p == &i;
+como p aponta para i, p guarda o endereco de memoria de i. portanto esta expressão retornará true.
+
+*p - *q;
+o simbolo * localizado antes do ponteiro é utilizado para resgatar o valor que esta atribuido a tal endereço de memoria, neste caso a espressão será:
+3 - 5 = -2;
+
+**&p;
+a expressão acima pode ser desenvolvida de seguinte maneira:
+*(*&p):
+a expressão (*&p) retoma um "novo" ponteiro o qualterá o mesmo endereco de memoria do ponteiro p, portanto essa expressão estaria se referindo ao proprio p. por fim *(p), que vai retornar o valor que esta alocado no endereco de memoria que o ponteiro p armazena, resp = 3;
+
+
+3 - *p/(*q) + 7;
+substituindo os valores, pois *p está se referindo ao valor 3 e o *q esta se referindo ao valor 5:
+3 - 3/5 + 7 = 9.4;
+porém como o tipo do ponteiro vai ser inteiro a respota final será = 10;
+
+
