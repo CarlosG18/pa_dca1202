@@ -1,1 +1,2 @@
-# Programacao_avancada_DCA
+# Programacao_avancada_DCA1202
+exercicios da lista
