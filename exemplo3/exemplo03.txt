@@ -7,14 +7,14 @@ p = i; --> ilegal, o ponteiro deve receber o valor de endereco de memoria de alg
 
 q = &j; --> ok!
 
-p = &*&i;
+p = &*&i; -->
 
-i = (*&)j;
+i = (*&)j; -->
 
-i = *&j;
+i = *&j; -->
 
-i = *&*&j;
+i = *&*&j; -->
 
-q = *p;
+q = *p; -->
 
-i = (*p)++ + *q;
+i = (*p)++ + *q; -->

@@ -1,4 +1,7 @@
-seja o seguinte trecho de programa: 
+
+
+
+seja o seguinte trecho de programa:
 
 int i=3, j=5;
 int *p, *q;
@@ -23,5 +26,3 @@ a expressão (*&p) retoma um "novo" ponteiro o qualterá o mesmo endereco de mem
 substituindo os valores, pois *p está se referindo ao valor 3 e o *q esta se referindo ao valor 5:
 3 - 3/5 + 7 = 9.4;
 porém como o tipo do ponteiro vai ser inteiro a respota final será = 10;
-
-
