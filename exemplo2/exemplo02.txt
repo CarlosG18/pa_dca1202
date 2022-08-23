@@ -1,0 +1,17 @@
+questão 2
+
+Mostre o que será impresso por programa supondo que i ocupa o endereço 4094 na memória.
+
+-- comentando o codigo --
+int i=5, *p; --> declara duas variaveis do tipo inteiro, i = 5, e um ponteiro p;
+p = &i; --> o ponteiro p recebe o endereco de memoria da variavel i, que de acordo com a questão é ogual a 4094.
+printf("%x %d %d %d %d", p,*p+2,**&p,3**p,**&p+4);
+}
+retorno da funcão printf():
+--> p : irá retorna o endereco de memoria da variavel i, onde é exibido em hexadecimal = 4094;
+--> *p+2 : como p aponta para i, ao colocar o * no inicio do ponteiro, ele retornara o valor de i = 5. substituindo na expressão ( 5 + 2 ) = 7;
+--> **&p : irá retornar o valor de um ponteiro que aponta para p, como p aponta para i, o valor retornado será = 5;
+--> 3**p : a expressão *p irá retornar o valor que esta guardada no endereco de memoria 4090, que no caso = 5, substituindo no restante da expressão temos: (3 * 5) = 15;
+--> **&p+4 : como a expressão **&p já goi analizada anteriormente e vimos que ela vale 5, substituimos no restante da expressão: (5 + 4) = 9;
+
+
