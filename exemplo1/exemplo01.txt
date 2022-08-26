@@ -1,6 +1,3 @@
-
-
-
 seja o seguinte trecho de programa:
 
 int i=3, j=5;
@@ -10,7 +7,7 @@ q = &j;
 
 determine o valor das seguintes expressoes:
 p == &i;
-como p aponta para i, p guarda o endereco de memoria de i. portanto esta expressão retornará true.
+como p aponta para i, p guarda o endereco de memoria de i. portanto esta expressão retornará verdadeiro que em c equivale a 1;
 
 *p - *q;
 o simbolo * localizado antes do ponteiro é utilizado para resgatar o valor que esta atribuido a tal endereço de memoria, neste caso a espressão será:
@@ -18,11 +15,11 @@ o simbolo * localizado antes do ponteiro é utilizado para resgatar o valor que 
 
 **&p;
 a expressão acima pode ser desenvolvida de seguinte maneira:
-*(*&p):
-a expressão (*&p) retoma um "novo" ponteiro o qualterá o mesmo endereco de memoria do ponteiro p, portanto essa expressão estaria se referindo ao proprio p. por fim *(p), que vai retornar o valor que esta alocado no endereco de memoria que o ponteiro p armazena, resp = 3;
-
+*(*(&p)):
+--> a expressão &p retorna o endereço de memoria do ponteiro p;
+--> *&p retorna o valor que esta atribuido a variavel p, que neste caso é o endereço de memoria da variavel i;
+--> **&p retorna o valor que esta na variavel i = 3.
 
 3 - *p/(*q) + 7;
-substituindo os valores, pois *p está se referindo ao valor 3 e o *q esta se referindo ao valor 5:
-3 - 3/5 + 7 = 9.4;
-porém como o tipo do ponteiro vai ser inteiro a respota final será = 10;
+como os tipos dos ponteiros p e q são int o valor da expressão (*p/(*q) = 0.
+portanto o valor retornado será 10.
