@@ -7,14 +7,14 @@ p = i; --> ilegal, o ponteiro deve receber o valor de endereco de memoria de alg
 
 q = &j; --> ok!
 
-p = &*&i; -->
+p = &*&i; --> ok!
 
-i = (*&)j; -->
+i = (*&)j; --> ilegal, devido a presença dos parênteses 
 
-i = *&j; -->
+i = *&j; --> ok!
 
-i = *&*&j; -->
+i = *&*&j; --> ok!
 
-q = *p; -->
+q = *p; --> ilegal, o ponteiro deve receber o endereço de memoria de uma variavel é não um valor.
 
-i = (*p)++ + *q; -->
+i = (*p)++ + *q; --> ok!
