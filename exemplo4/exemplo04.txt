@@ -21,7 +21,7 @@ int main() {
   *p1 = 20;
   printf("%d \n", valor);
 
-  (a) -->
+  (a) --> será impresso na tela o valor 20;
 
   /* (b) */
   temp = 26.5;
@@ -29,39 +29,39 @@ int main() {
   *p2 = 29.0;
   printf("%.1f \n", temp);
 
-  (b) -->
+  (b) --> será impresso na tela o valor 29.0;
 
   /* (c) */
   p3 = &nome[0];
   aux = *p3;
   printf("%c \n", aux);
 
-  (c) -->
+  (c) --> será impresso na tela o caracterer "P";
 
   /* (d) */
   p3 = &nome[4];
   aux = *p3;
   printf("%c \n", aux);
 
-  (d) -->
+  (d) --> será impresso na tela o caracterer "e";
 
   /* (e) */
   p3 = nome;
   printf("%c \n", *p3);
 
-  (e) -->
+  (e) --> será impresso na tela o caracterer "P";
 
   /* (f) */
   p3 = p3 + 4;
   printf("%c \n", *p3);
 
-  (f) -->
+  (f) --> será impresso na tela o caracterer "e";
 
   /* (g) */
   p3--;
   printf("%c \n", *p3);
 
-  (g) -->
+  (g) --> será impresso na tela o caracterer "t";
 
   /* (h) */
   vetor[0] = 31;
@@ -71,40 +71,40 @@ int main() {
   idade = *p4;
   printf("%d \n", idade);
 
-  (h) -->
+  (h) --> será impresso na tela o valor 31;
 
   /* (i) */
   p5 = p4 + 1;
   idade = *p5;
   printf("%d \n", idade);
 
-  (i) -->
+  (i) --> será impresso na tela o valor 45;
 
   /* (j) */
   p4 = p5 + 1;
   idade = *p4;
   printf("%d \n", idade);
 
-  (j) -->
+  (j) --> será impresso na tela o valor 27;
 
   /* (l) */
   p4 = p4 - 2;
   idade = *p4;
   printf("%d \n", idade);
 
-  (l) -->
+  (l) --> será impresso na tela o valor 31;
 
   /* (m) */
   p5 = &vetor[2] - 1;
   printf("%d \n", *p5);
 
-  (m) -->
+  (m) --> será impresso na tela o valor 45;
   
   /* (n) */
   p5++;
   printf("%d \n", *p5);
 
-  (n) -->
+  (n) --> será impresso na tela o valor 27;
 
   return(0);
 }
