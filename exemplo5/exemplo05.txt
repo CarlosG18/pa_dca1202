@@ -16,9 +16,11 @@ int main(void){
   }
 }
 
+está mostrando duas formas de se obter os valores do vetor e do endereço de memoria de cada elemento do vetor, acessando diretamente com o uso dos "[]" e com o uso dos ponteiros.
+
 saidas:
-(01) --> 
-(02) --> 
-(03) --> 
-(04) -->
-(05) -->
+(01) --> será impresso a variavel i; 0, 1, 2 e 3;
+(02) --> será retornado o valor das posições i de cada elemento do vetor, utilizando os [];
+(03) --> será retornado o valor das posições i de cada elemento do vetor, utilizando ponteiros;
+(04) --> será retornado o endereço de memoria das posições i de cada elemento do vetor, utilizando os [];
+(05) --> será retornado o endereço de memoria das posições i de cada elemento do vetor, utilizando os ponteiros;
