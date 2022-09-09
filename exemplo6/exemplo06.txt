@@ -1,0 +1,26 @@
+6. Assumindo que pulo[] é um vetor do tipo int, quais das seguintes expressões referenciam o
+valor do terceiro elemento do vetor?
+
+#include <stdio.h>
+
+int main(void){
+
+  int vetor[4] = {2,3,1,5}, *p;
+  p = vetor;
+  
+  //maneiras de acessar o indicie 3 do vetor
+  printf("%d \n", vetor);
+  printf("%d\n\n", vetor + 1);
+  printf("%p", p);
+
+  
+  *(pulo + 2); ok!
+  *(pulo + 4); not! --> irá retornar o valor da 5 posição do vetor;
+  pulo + 4; not! --> irá retornar um valor intero que representa o ponteiro mais 4 bits acrecentados.
+  pulo + 2; not! --> irá retornar um valor intero que representa o ponteiro mais 2 bits acrecentados.
+  
+
+  apenas a primeira expressão é possivel obter o terceiro valor do vetor pulo.
+  
+  return 0;
+}
