@@ -6,6 +6,17 @@ Suponha também que na máquina seja usada uma variável do tipo char ocupa 1 by
 int ocupa 2 bytes, do tipo float ocupa 4 bytes e do tipo double ocupa 8 bytes. Quais serão os
 valores de x+1, x+2 e x+3 se:
 ◦ x for declarado como char?
+
+--> como char ocupa apenas um byte, ao adicionar +1 ao x será acreacentado 1, ou seja, a saida será x+1 = 4093, x+2 = 4094, x+3 = 4095.
+
 ◦ x for declarado como int?
+
+--> como int ocupa 2 bytes, ao adicionar 1 ao x será acrecentado 2, ou seja, a saida será x+1 = 4094, x+2 = 4096, x+3 = 4098
+
 ◦ x for declarado como float?
+
+--> como float ocupa 4 bytes, ao adicionar 1 ao x será acrecentado 4, ou seja, a saida será x+1 = 4096, x+2 = 5000, x+3 = 5004
+
 ◦ x for declarado como double?
+
+--> como double ocupa 8 bytes, ao adicionar 1 ao x será acrecentado 8, ou seja, a saida será x+1 = 5000, x+2 = 5008, x+3 = 5016

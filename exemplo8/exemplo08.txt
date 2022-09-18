@@ -10,7 +10,7 @@ int main(){
   }
 }
 
--->
+--> irá retornar o valor dos três endedeços de vet, ou seja, o valor de vet, vet+1 e vet+2 que são os valores de vet[0] = 4, vet[1] = 9 e vet[2] = 13.
 
 int main(){
   int vet[] = {4,9,13};
@@ -20,4 +20,4 @@ int main(){
   }
 }
 
--->
+--> como na função printf esta com o %x que é o indicador para numero hecadecimal o programa irá imprimir na tela o valor do endereço de memoria de vet, vet+1 e vet+2;
