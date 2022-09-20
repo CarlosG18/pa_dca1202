@@ -1,0 +1,41 @@
+#include<stdio.h>
+
+int main()
+{
+    int i;
+     
+    char x[4], *px = x;
+    int y[4], *py = y;
+    float z[4], *pz = z;
+    double w[4], *pw = w;
+    
+    //para o char
+    printf("char - 1 byte\n");
+    for(i=0;i<4;i++){
+        printf("endereço de char = x[%i] = %p\n", i, px+i);
+    }
+    
+    printf("\nint - 2 bytes\n");
+    
+    //para o int
+    for(i=0;i<4;i++){
+        printf("endereço de int = y[%i] = %p\n", i, py+i);
+    }
+    
+    printf("\nfloat - 4 bytes\n");
+    
+    //para o float
+    for(i=0;i<4;i++){
+        printf("endereço de float = z[%i] = %p\n", i, pz+i);
+    }
+    
+    printf("\ndouble - 8 bytes\n");
+    
+    //para o Double
+    for(i=0;i<4;i++){
+        printf("endereço de double = w[%i] = %p\n", i, pw+i);
+    }
+    
+    
+    return 0;
+}
