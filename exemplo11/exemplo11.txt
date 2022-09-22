@@ -7,11 +7,11 @@ int i=3;
 Identifique quais dos seguintes comandos é válido ou inválido:
 aloha[2] = value;
 
--->
+--> valido pois o elemento 2 do vetor aloha estaria recebendo o valor de value = 2.2;
 
 scanf("%f", &aloha);
 
--->
+--> seria valido, porem como nao e especificado a posicao sera adicionado no aloha[0]
 
 aloha = value";
 
