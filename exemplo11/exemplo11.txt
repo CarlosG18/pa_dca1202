@@ -15,24 +15,24 @@ scanf("%f", &aloha);
 
 aloha = value";
 
--->
+--> não será uma atribuição valida pelo fato do caracterer " esta presente no final do comando;
 
 printf("%f", aloha);
 
--->
+--> irá retornar o valor da posição aloha[0]
 
 coisas[4][4] = aloha[3];
 
--->
+--> comando valido
 
 coisas[5] = aloha;
 
--->
+--> comando invalido
 
 pf = value;
 
--->
+--> comando invalido, pois como se trata de uma variavel float normal deveria ser usado o operador de atribuiçao de endereço "&" antes da variavel value;
 
 pf = aloha;
 
--->
+--> comando valido, pois quando o tipo da variavel é um vetor não é nescessario o uso do "&" para o ponteiro;
