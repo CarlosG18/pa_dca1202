@@ -3,3 +3,49 @@ questão 13:
 Implemente em linguagem C uma função em um programa de computador que leia n valores do
 tipo float e os apresente em ordem crescente. Utilize alocação dinâmica de memória para
 realizar a tarefa.
+
+#include <stdio.h>
+
+void troca(float *pv, int i, int j){
+  float temp;
+  temp = *(pv+i);
+  *(pv+i) = *(pv+j);
+  *(pv+j) = temp;
+}
+
+void sort(int n, float *pv){
+  int i, j;
+  for(j=0; j<n; j++){
+    for(i=n-1; i>=0; i--){
+        if(*(pv+i) < *(pv+(i-1))){
+          troca(pv, i, i-1);
+        }
+    }
+  }
+}
+
+int main(void){
+  int n, i;
+  printf("insira a quantidade de valores que serão ordenados = ");
+  scanf("%d", &n);
+  float *pv;
+  pv = malloc(n*sizeof(float));
+  for(i=0;i<n;i++){
+    printf("valor %i = ", i+1);
+    scanf("%f", pv+i);
+  }
+
+  sort(n, pv);
+
+  printf("\n\nVALORES DO VETOR ORDENADO EM ORDEM CRESCENTE:\nvetor:[");
+  for(i=0;i<n;i++){
+    if(i == n-1)
+    printf("%.1f", *(pv+i));
+    else printf("%.1f,", *(pv+i));
+  }
+  printf("]");
+
+  free(pv);
+
+  return 0;
+}
