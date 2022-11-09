@@ -1,0 +1,20 @@
+documentação - docvision
+
+#include <string>
+#include <fstream>
+#include <iostream>
+
+formato csv - processamento de dados em planilhas
+
+std::
+std::
+
+//class
+std::string s;
+
+//not class
+char *nome;
+char nome[50]; --> guarda 49 caracteres
+
+class stringstream
+

@@ -1,0 +1,106 @@
+programaçao generica : se adpta a diversos tipos de dados
+
+gabarito de funcoes e class
+
+palavra reservada template
+
+construcao de uma funcao generica simples:
+
+template < typename/class T>
+T media (T a, T b){
+	return (a + b)/2;
+}
+
+--> e aplicavel apenas para a funcao logo abaixo do template
+
+usando o template 
+
+c = media<int>(a, b);
+
+construcao de um template mais completa:
+
+template <typename T, typename U>
+U media(T a, T b){
+	return (a + b)/2;
+}
+
+c = media<float,int>(a, b);
+
+--> pode-se passar valores nos templates sao colocados no fim do template
+template <typename T, int n=20>
+
+gabarito para classe - mesma coisa com o da funcao 
+classe com gabarito na implementacao 
+name_classe<T>::tal();
+
+limitacao para trabalhar com gabaritos:
+--> voce nao consegue criar com a separacao da definicao com a implementacao, ou seja, voce deve implementarno class.h, esqueça o class.cpp. porem fora da classe.
+
+------ LICENSA DE SOFTWARE ---------
+lib qt
+kde
+//musescore
+
+--> LIB STL
+'não precisa se preocupar com liberação de memoria, porque a biblioteca já faz isso'
+containers
+iteradores 
+algoritimos
+functores
+
+-------------- conteiners ----------------------
+possui um header para cada tipo de conteiner
+ex: com o container vector
+
+#include <iostream>
+#include <vector> //header do container vector
+
+using namespace std;
+
+int main()
+{
+    int i=0;
+    std::vector<int> v(20,50);
+    v.push_back(2);
+
+    for(i=0; i<v.size(); i++){
+        std::cout << v[i] << std::endl;
+    }
+    return 0;
+}
+
+------------- iterador ---------------------------
+é associado aos conteirners 
+é um ponteiro diferenciado
+* iterador direto 
+* iterador reverso
+declaraçao do iterador
+std::vector<int>::iterator it;
+
+usando o iterador 
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+    int i=0;
+    std::vector<int> v(20,50);
+    std::vector<int>::iterator it;
+    v.push_back(45);
+    v.push_back(21);
+
+    it = v.begin();
+
+    for(it = v.begin(); it!=v.end(); it++){
+        std::cout << *it << std::endl;
+    }
+
+    std::cout << "capacity: " << v.capacity() << std::endl;
+    return 0;
+}
+
+------------------ algoritmos -----------------
+header numeric - class: iota - gerar uma sequencia de numeros
+class: random_shuffle - embaralhar os dados

@@ -1,0 +1,75 @@
+classes abstradas 
+
+se uma classe possui:
+virtual (nome do metodo) ()=0;
+ela é uma classe abstrata, não pode criar objetos dela e sim ponteiros que apontam para ela.
+
+------------------------ arquivo de configuração --------------------------------
+////// xfig - formato de armazenamento de imagens
+//////targa
+
+construção do arquivo:
+
+reta (int x0, int y0, int x1, int y1, float r, float g, float b);
+
+ex:
+reta 0 0 3 3 1 1 1
+circulo 3 2 5 1 0 1
+
+HEADER 
+#include <fstream>
+
+std::ifstream fin;
+
+fin.open([diretorio do arquivo]);
+
+
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <vector>
+
+class FiguraGeometrica{
+  public:
+  
+}
+
+class Reta{
+  
+}
+
+int main() {
+
+  std::ifstream fin;
+  std::vector<std::string> nomes;
+  std::vector<std::string>::iterator it;
+  std::vector<FiguraGeometrica> figs;
+
+  int i;
+  float r, g, b;
+
+  fin.open("assets/figura.txt");
+
+  if (!fin.is_open()) {
+    std::cout << "erro!";
+  }
+
+  std::string s;
+
+  while (fin.good()) { // se cada linha foi processada corretamente
+    // processa a linha
+    fin >> s;
+    if (s.compare("reta") == 0) {
+      int x0, y0, x1, y1;
+      fin >> x0 >> y0 >> x1 >> y1;
+      fin >> r >> g >> b;
+      figs.push_back(new Reta(x0, y0, x1, y1, r, g, b));
+    }
+  }
+
+  /*for (i = 0; i < 1; i++) {
+    std::cout << "nome = " << nomes[i] << std::endl;
+  }*/
+}
+
+esphere estatic_

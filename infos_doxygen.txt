@@ -1,0 +1,25 @@
+doxygen (suporte para varias linguagens) - documentação em c++
+
+trabalha em cima dos arquivos de cabeçalho
+linux 
+$ sudo apt install doxygen doxygen-gui
+ferramenta graphviz
+
+doxywizard
+
+tipo de comentario para o doxygen
+/**
+* @brief Sculptor - descrição resumida do que a classe/metodo faz
+* @param x
+* @param y
+* @param z
+*/
+
+tags
+@details - detalhes sobre a classe
+
+você pode internalizar html dentro do comentário do doxygen
+colocar equaçao - usando latex - mathJax 
+
+
+

@@ -1,0 +1,25 @@
+fluxo de entrada e saida em c++
+
+-- hd e ssd (estudar sobre);
+-- protocolos de comunicação (estudar sobre);
+-- sistemas de arquivos - linux - swap/ntfs/xfs/efs (estudar sobre);
+-- comando para saber o tipo do arquivo "file"
+--FILE *t; -> ponteiro para arquivo em C; fopen; fprintf; fscanf 
+
+-- em c++
+stringstream
+classe - ofstream - header <fstream> 
+
+exemplo de código - slides
+
+#include <iostream>
+#include <fstream>
+
+int main(void){
+	
+	return 0;
+}
+
+cuidados - permisão para escrever chmod e tals
+
+

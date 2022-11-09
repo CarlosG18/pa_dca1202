@@ -1,0 +1,26 @@
+aula poteiros e alocação em c++
+
+vetor v;
+vetor *v1; --> ponteiro para objeto: o que é guardado? o endereço de onde inicia o vetor;
+v1 = &v;
+v1->print(); //acessando um metodo do objeto utilizando o ponteiro ultilizando "->"
+
+this - reference ao objeto que esta sendo ultilizado.
+
+ex:
+setX(float x){
+	this->x = x;
+}
+
+alocação dinamica de memoria em c++
+ponteiro bruto 
+alocação individual - new / delete - executa o construtor e destrutor da classe - são operadores da linguagem não precisa incluir alguma biblioteca
+alocaçao em bloco - new[] / delete[]
+o uso uso de cada alocação é unica, ou seja, não use os dois metodos "interligados", pois a impementação interna de cada um é diferente
+
+alocação dinamica de classes
+
+
+
+
+

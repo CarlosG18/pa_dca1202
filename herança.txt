@@ -1,0 +1,27 @@
+//tickz
+//tixample.net
+
+herança -- poo
+pergunta - "é um" se for "V" ele herda "F" ele não herda
+
+c++
+class Derivada : public Base {};
+--> public - tipo de herança
+--> Derivada - nome da nova classe
+--> Base - classe base em que a nova classe será herdada
+
+// private: só tem acesso apenas atraves da propria classe
+//public: tem acesso em qualquer lugar do codigo
+//protected: interface protegida - só tem acesso as herdeiras e a propria classe
+
+! sobrecarga de metodos em classes filhas
+
+liberar primeiro os destrutores de subclasses e depois da superclasse 
+
+criação dos objetos na herança
+Motor::Motor(float x) : Equipamento(x){
+
+}
+
+
+
