@@ -1,0 +1,142 @@
+carlos gabriel
+
+questão 1:
+
+#include <stdio.h>                                #include <stdlib.h>
+#include <string.h>
+#include <math.h>                                 
+void geraMatriz(int **x){                           // gerando valores aleatorios entre 0 e 1 e colocando na matriz                                     for(int i = 0; i<8; i++){
+    for(int j = 0; j<8; j++){
+      x[i][j] = rand() % 2;
+    }
+  }
+}
+
+void showMatriz(int **x, int nl, int nc){
+  //printando a matriz x
+  printf("matriz 8x8: \n\n");
+  for(int i = 0; i<nl; i++){
+    printf("| ");
+    for(int j = 0; j<nc; j++){
+      printf("%d", x[i][j]);
+    }
+    printf(" |\n");
+  }
+  printf("\n");
+}
+
+void printBits(unsigned char c){
+   unsigned char bit;
+  for(bit=128; bit !=0 ;bit>>=1){                     if(c & bit)  printf("1");
+    else  printf("0");
+  }
+  printf(" ");
+}
+
+void printAllBits(unsigned char *py, int bytes){
+  //imprimindo todos os bytes da variavel
+  printf("bites da variavel y: \n");
+  for(int i=0; i<bytes; i++){
+    printf("\nbyte %d = ", i);
+    printBits(*(py + i));
+  }                                               }
+
+void joinBits(int **x, unsigned char *py){          //colocando os bites da matriz nos bytes da variavel
+  int num = 0;
+  for(int i=0; i<8; i++){                             for(int j=0; j<8; j++){                             if(x[i][j] == 1){
+        num += pow(2,7-j);
+      }
+    }
+    *(py + i) = num;
+    num = 0;
+  }
+}
+
+int main(void) {
+  unsigned long int y;
+  unsigned char *py = &y;
+  int **x;                                          int nc = 8, nl = 8, i, bytes = sizeof(unsigned l
+ong int);
+
+  //alocando a matriz na memoria
+  x = (int**) malloc(nl*sizeof(int*));
+  x[0] = (int*) malloc(nc*nl*sizeof(int));
+  for(i=1; i<nl; i++){
+    x[i] = x[i-1] + nc;
+  }
+
+  geraMatriz(x);
+  showMatriz(x, nl, nc);
+
+  joinBits(x, py);
+  printAllBits(py,bytes);
+
+  //liberando a matriz x da memoria
+  free(x[0]);
+  free(x);
+  return 0;
+}
+
+questão 2:
+
+#include <stdlib.h>                               
+int main(void) {
+  int nz, ny, nx, i, j, k, plano;
+  int centrox,centroz,centroy;
+  int rz,rx,ry;
+  char ***m;
+                                                    //recebendo valores do usuario para a matriz 3d   printf("informe os valores das seguintes variave
+is:\nnz (numero de planos) = ");
+  scanf("%d", &nz);
+  printf("ny (numero de linhas) = ");
+  scanf("%d", &ny);                                 printf("nx (numero de colunas) = ");
+  scanf("%d", &nx);
+
+  centrox = (float) nx/2;
+  centroy = (float) ny/2;                           centroz = (float) nz/2;
+
+  printf("\n\ncentro do elipsoide = (%d, %d, %d) \
+n", centrox,centroy,centroz);
+  printf("escolha o plano que será apresentado = "
+);
+  scanf("%d", &plano);
+  printf("tamanho do raio em x = ");                scanf("%d", &rx);                                 printf("tamanho do raio em y = ");
+  scanf("%d", &ry);
+  printf("tamanho do raio em z = ");
+  scanf("%d", &rz);
+
+
+  //alocando a matriz 3d na memoria
+  m = (char***) malloc(nz*sizeof(char**));
+  m[0] = (char**) malloc(nz*ny*sizeof(char*));
+  m[0][0] = (char*) malloc(nz*ny*nx*sizeof(char));
+
+  //ajustando os endereços
+  for(i=1; i<nz; i++){
+    m[i] = m[i-1] + ny;
+  }
+
+  for(i=0; i<nz; i++){
+    for(j=0; j<ny; j++){
+      if(i == 0 && j == 0){
+        j++;
+        m[i][j] = m[i][j-1] + nx;
+      }else{
+        if(j == 0){
+          m[i][j] = m[i-1][ny-1] + nx;                    }else{
+          m[i][j] = m[i][j-1] + nx;
+        }
+      }
+    }
+  }
+                                                    //colocando 1 dentro da elipse e 0 fora
+  //equação de um elipsoide: [(x - i)/a]^2 + [(y - j)/b]^2 + [(z - k)/c]^2 --> i centro em x, j cent
+ro em y e k centro em z.
+
+ //liberando a matriz
+ free(m[0][0]);
+ free(m[0]);
+ free(m);
+
+  return 0;
+}
