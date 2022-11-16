@@ -1,0 +1,10 @@
+---- tratamento de exceçoes (erros) - entrada de dados -----
+#programação segura
+
+em C
+criar codigos de erro ou finalizar o programa exit();
+
+em C++
+try => lançameto de execeção
+throw => fluxo desviado para o catch - lança a execeção
+catch => captura a execeção
