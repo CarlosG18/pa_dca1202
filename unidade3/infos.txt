@@ -1,0 +1,10 @@
+gerenciadores de interfaces
+ubuntu
+kde
+gtk++
+qt 
+programação orientada a eventos
+wxwidgets
+instalar versao 5 xx
+macro de compilação
+qt -> conexão de sinais e slots
